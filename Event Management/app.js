@@ -261,9 +261,8 @@ app.post('/captureresponse',async(req,res) => {
           
                        var msg = {
                         to: req.body.email,
-                        bcc: "sunil.panigrahi@finlatics.com",
-                        from:"Finlatics - Information Centre <mails@finlatics.live>",
-                        "h:Reply-To": "care@finlatics.com",
+                        bcc: req.body.email,
+                        from:req.body.email,
                         subject: "Event Conformation",
                         html: str
                       };
